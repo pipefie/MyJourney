@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-color: #ffffff;
+    color: #333;
+    padding: 2rem;
+    padding: 0;
+}
+
+#title, #subtitle{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.main-nav {
+    width: 100%;
+    background-color: #333;
+}
+
+/*Use of flexbox layout*/
+.main-nav-list {
+    list-style: none;
+    display: flex; /*felx container which place horizontally the elements*/
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.main-nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.main-nav-list li a:hover {
+    color: #f9d342; 
+}
+
+.main-screen {
+    position: relative;
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;      /* Center content vertically */
+    height: 100vh;            /* Full viewport height */
+    background: url('imagenes/gaztelugatxe.jpg') no-repeat center center/cover; /*background will no repeat, horizontal and vertical positions centered and we make sure of the background image covering the entire area */
+    color: white;             /* Text color should stand out against the background */
+    text-align: center;       /* Center text */
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem; /* Space between items */
+}
+
+.menu-item {
+    text-align: center;
+    flex: 1;
+}
+
+.menu-item img {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.menu-item p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif; /* Custom font styling */
+}
+
+.menu-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.intro-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.intro-text a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.footer{
+    background-color: #333; /* Dark background for the footer */
+    color: white;           /* White text */
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-link{
+    margin-top: 1.5rem;
+}
+
+.privacy-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.privacy-link a:hover {
+    text-decoration: underline;
+}
+
+/*DESTINATIOS PAGE*/
+
+.destinations-screen{
+    background: url('imagenes/montmartre2.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.destinations-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+}
+
+.destinations-screen-content{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.destinations-grid {
+    display: grid; /*grid layout*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*repeat is a function to tell the browser to repeat a patern, where the first parameter is the number of repetitions
+    and the second is the size of each column.
+    auto-fit is a special keyword that allows the grid to automatically create as many columns as can fit in the container based on the column size specified.
+    minmax is another function that defines the minimum and maximum size of each column. It is used to create flexible columns that respond to the available space.
+    All thogehter is used to organize the grid based on the available space*/
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.destination-item{
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the logos in the container */
+    gap: 2rem; /* Add space between the logos */
+    margin: 2rem 0; /* Spacing from other sections */
+}
+
+.destination-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.destination-item img{
+    max-width: 150px; /* Set maximum width for each logo */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+
+.destination-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.destination-name{
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Privacy Policy page*/
+
+.header-privacy{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.policy-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.policy-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-content ul li {
+    list-style: disc;
+}
+
+/*HIKES PAGE*/
+.hikes-screen{
+    background: url('imagenes/irati1.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hikes-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+}
+
+.hikes-screen-content{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hikes-grid {
+    display: grid; /*grid layout*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*repeat is a function to tell the browser to repeat a patern, where the first parameter is the number of repetitions
+    and the second is the size of each column.
+    auto-fit is a special keyword that allows the grid to automatically create as many columns as can fit in the container based on the column size specified.
+    minmax is another function that defines the minimum and maximum size of each column. It is used to create flexible columns that respond to the available space.
+    All thogehter is used to organize the grid based on the available space*/
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.hikes-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.hikes-item img{
+    max-width: 150px; /* Set maximum width for each logo */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+
+.hikes-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.hikes-name{
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*DESTINATIONS STYLE*/ 
+
+.city-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.city-description {
+    flex: 1;
+    text-align: left;
+}
+
+.city-description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.city-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+}
+
+/* Image Grid */
+.city-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    flex: 1;
+}
+
+.city-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/*HIKES PAGE*/
+.hike-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+.hike-description {
+    flex: 1;
+    text-align: left;
+}
+
+.hike-description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hike-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+}
+
+/* Image Grid for Hikes */
+.hike-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hike-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*ABOUT ME PAGE*/
+.about-me-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.about-me-description {
+    flex: 1;
+    text-align: left;
+}
+
+.about-me-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-me-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
