@@ -353,6 +353,41 @@ body {
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
+
+/* Styling for the Hike Comparison Table */
+.hikes-table-section {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.hikes-table-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hike-comparison {
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.hike-comparison thead th {
+    background-color: #333;
+    color: white;
+    padding: 0.8rem;
+}
+
+.hike-comparison tbody td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.hike-comparison tbody tr:hover {
+    background-color: #f1f1f1;
+}
 /*DESTINATIONS STYLE*/ 
 
 .city-content {
@@ -395,6 +430,44 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Destination Comparison Table Section */
+.destinations-table-section {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.destinations-table-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Styling the table */
+.destination-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.destination-comparison thead th {
+    background-color: #333;
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.destination-comparison tbody td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.destination-comparison tbody tr:hover {
+    background-color: #f1f1f1;
+}
 /* Contact Form Section */
 .contact-form-section {
     max-width: 800px;
